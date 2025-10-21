@@ -4,7 +4,7 @@ function TaskList({ tasks, onToggle, onDelete }) {
   return (
     <ul className="task-list">
         {tasks.length === 0 ? (
-        <p>No tasks available.</p>
+        <p className="noTasks">No tasks to display!</p>
       ) : (
         tasks.map((task) => (
           <TaskItem

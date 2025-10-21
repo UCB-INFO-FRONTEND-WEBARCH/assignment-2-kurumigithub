@@ -144,6 +144,12 @@ ul {
     color: #7e7d79;
 }
 
+.noTasks {
+    text-align: center;
+    color: #dc4c3e;
+    margin-top: 50px;
+}
+
 .filters {
   margin-bottom: 15px;
   display: flex;
