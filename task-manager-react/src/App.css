@@ -1,42 +1,224 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* This is your CSS files */
+/* Use clear section comments */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0;min-height: 100vh;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ========== HEADER STYLES ========== */
+
+h1 {
+    font-size: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-header { 
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-right: 10px;
+    color: #ffffff;
+    background-color: #dc4c3e;
+    justify-content: flex-start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.search-bar, 
+.main-header__status {
+    display: flex;
+    align-items: center;
 }
 
-.card {
-  padding: 2em;
+#search-icon,
+#check-icon {
+    margin-right: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.main-header__status {
+    margin-left: auto;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    padding-left: 35px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    padding: 4px 20px;
+    margin: 3px;
+    width: 215px;
+}
+
+.search-bar .search {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.search-bar .search::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+}
+
+/* ========== NAVIGATION STYLES ========== */
+.sidebar {
+    width: 300px;
+    background-color: #fefbf2;
+    color: #000000;
+    flex-shrink: 0;
+    padding: 25px 0px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sidebar-link span {
+    margin-left: 10px;
+}
+
+.sidebar-link:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.count {
+    margin: 5px;
+    color: #7e7d79;
+    font-size: 12px;
+}
+
+/* ========== MAIN CONTENT STYLES ========== */
+.main-content { 
+    display: flex;
+    flex-grow: 1;
+}
+
+.checklist {
+    padding: 20px 30px;
+    flex-grow: 1;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tasks {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.tasks:hover {
+    background-color: #f0f0f0;
+}
+
+.tasks.completed span {
+    text-decoration: line-through;
+    color: #7e7d79;
+}
+
+.filters {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.filters button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.filters button:hover {
+  background-color: #e0e0e0;
+}
+
+.filters button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.task-form {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #dc4c3e;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.custom-label {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #ccc;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-checkbox:checked + .custom-label {
+    background-color: #007bff; 
+    border-color: #007bff;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 480px) { 
+    .sidebar {
+        display: none;
+    }
+
+    .menu-button {
+    background: none;
+    border: none;
+    padding-left: 15px;
+    margin-right: 10px;
+}
 }
