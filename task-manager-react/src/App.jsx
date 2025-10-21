@@ -35,10 +35,12 @@ function App() {
     return tasks;
   }
 
+  // store filtered tasks
   const filteredTasks = filterTasks();
 
   return (
     <div className="app">
+      
       <header>
         <nav className="main-header">
           <button class="menu-button">
