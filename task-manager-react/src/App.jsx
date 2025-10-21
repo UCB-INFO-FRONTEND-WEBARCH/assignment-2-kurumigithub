@@ -43,13 +43,13 @@ function App() {
       
       <header>
         <nav className="main-header">
-          <button class="menu-button">
+          <button className="menu-button">
               <img src="../../src/assets/menu_icon.png" alt="Open Menu" id="menu-icon" />
           </button>
 
-          <div class="search-bar">
+          <div className="search-bar">
               <img src="../../src/assets/search_icon.png" alt="search" id="search-icon" />
-              <input type="search" class="search" id="search-input" name="q" placeholder="Quick Find" />
+              <input type="search" className="search" id="search-input" name="q" placeholder="Quick Find" />
           </div>
 
           <TaskCounter tasks={tasks} />
