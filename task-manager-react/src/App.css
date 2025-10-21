@@ -41,7 +41,7 @@ h1 {
 }
 
 #search-icon,
-#check-icon {
+.check-icon {
     margin-right: 10px;
 }
 
