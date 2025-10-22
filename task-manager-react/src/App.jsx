@@ -54,7 +54,7 @@ function App() {
           </button>
 
           <div className="search-bar">
-              <img src="../../src/assets/search_icon.png" alt="search" id="search-icon" />
+              <img src={searchIcon} alt="search" id="search-icon" />
               <input type="search" className="search" id="search-input" name="q" placeholder="Quick Find" />
           </div>
 
@@ -67,7 +67,7 @@ function App() {
           <ul>
             <li>
                 <a href="#" className="sidebar-link">
-                    <img src="../../src/assets/inbox_icon.png" alt="Inbox" />
+                    <img src={inboxIcon} alt="Inbox" />
                     <span>Inbox</span>
                     <span className="count">5</span>
                 </a>
@@ -75,7 +75,7 @@ function App() {
 
             <li>
                 <a href="#" className="sidebar-link">
-                    <img src="../../src/assets/calendar_icon.png" alt="Inbox" />
+                    <img src={calendarIcon} alt="Inbox" />
                     <span>Today</span>
                     <span className="count">5</span>
                 </a>
@@ -83,7 +83,7 @@ function App() {
               
             <li>
                 <a href="#" className="sidebar-link">
-                    <img src="../../src/assets/upcoming_icon.png" alt="Inbox" />
+                    <img src={upcomingIcon} alt="Inbox" />
                     <span>Upcoming</span>
                 </a>
             </li>
