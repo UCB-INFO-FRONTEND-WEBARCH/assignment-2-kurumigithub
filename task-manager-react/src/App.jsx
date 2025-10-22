@@ -4,6 +4,12 @@ import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 import TaskCounter from './components/TaskCounter'
 
+import menuIcon from './assets/menu_icon.png'
+import searchIcon from './assets/search_icon.png'
+import inboxIcon from './assets/inbox_icon.png'
+import calendarIcon from './assets/calendar_icon.png'
+import upcomingIcon from './assets/upcoming_icon.png'
+
 function App() {
   const [tasks, setTasks] = useState([]);
   const [activeFilter, setActiveFilter] = useState('all'); // all, active, completed
@@ -44,7 +50,7 @@ function App() {
       <header>
         <nav className="main-header">
           <button className="menu-button">
-              <img src="../../src/assets/menu_icon.png" alt="Open Menu" id="menu-icon" />
+              <img src={menuIcon} alt="Open Menu" id="menu-icon" />
           </button>
 
           <div className="search-bar">
