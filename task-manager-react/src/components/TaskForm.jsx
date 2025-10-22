@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+// DO I NEED TO VALIDATE PROP TYPE?
+
 function TaskForm({ onAddTask }) {
   const [taskText, setTaskText] = useState('');
 
