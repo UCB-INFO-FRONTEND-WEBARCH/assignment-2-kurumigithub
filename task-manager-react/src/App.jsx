@@ -5,7 +5,7 @@ import TaskList from './components/TaskList'
 import TaskCounter from './components/TaskCounter'
 
 function App() {
-  const [tasks, setTasks] = useState([{id: Date.now(), text: 'Sample Task', completed: false}]);
+  const [tasks, setTasks] = useState([]);
   const [activeFilter, setActiveFilter] = useState('all'); // all, active, completed
 
   const addTask = (taskText) => {
