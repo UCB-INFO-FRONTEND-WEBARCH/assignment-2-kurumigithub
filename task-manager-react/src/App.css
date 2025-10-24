@@ -135,6 +135,10 @@ ul {
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
 }
 
+.task-input {
+    width: 50%;
+}
+
 .tasks:hover {
     background-color: #f0f0f0;
 }

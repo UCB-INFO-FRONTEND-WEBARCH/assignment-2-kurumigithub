@@ -18,6 +18,7 @@ function TaskForm({ onAddTask }) {
       <input
         type="text"
         placeholder="Enter new task..."
+        className="task-input"
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
       />
